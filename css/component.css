@@ -1,0 +1,62 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6b6b6b+0,131313+100 */
+	background: #6b6b6b; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #6b6b6b 0%, #131313 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #6b6b6b 0%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #6b6b6b 0%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6b6b', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	z-index: 1;
+}
+.demo-3 .large-header {
+	background: #7f8c8d;
+}
+
+.demo-4 .large-header {
+	background: #f9f1e9;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	font-size: 1em;
+	text-transform:uppercase;
+}
+
+.main-title p {
+	color:#f9a432;
+	text-transform:uppercase;
+	margin:0 auto;
+}
+.main-title h1 {
+	margin:5px auto;
+}
+.main-title img {
+	max-width: 310px;
+}
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title, 
+	.demo-3 .main-title,
+	.demo-4 .main-title {
+		font-size: 3em;
+	}
+
+	.demo-2 .main-title {
+		font-size: 4em;
+	}
+}
