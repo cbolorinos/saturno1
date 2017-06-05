@@ -13,7 +13,7 @@
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = height+'px';
+        largeHeader.style.height = (height * 0.66666)+'px';
 
         canvas = document.getElementById('demo-canvas');
         canvas.width = width;
@@ -118,14 +118,14 @@
             for(var i in points) {
                 // detect points in range
                 if(Math.abs(getDistance(target, points[i])) < 4000) {
-                    points[i].active = 0.3;
-                    points[i].circle.active = 0.6;
-                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
-                    points[i].active = 0.1;
+                    points[i].active = 0.15;
                     points[i].circle.active = 0.3;
+                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
+                    points[i].active = 0.05;
+                    points[i].circle.active = 0.15;
                 } else if(Math.abs(getDistance(target, points[i])) < 40000) {
-                    points[i].active = 0.02;
-                    points[i].circle.active = 0.1;
+                    points[i].active = 0.03;
+                    points[i].circle.active = 0.05;
                 } else {
                     points[i].active = 0;
                     points[i].circle.active = 0;
