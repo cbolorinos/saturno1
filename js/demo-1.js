@@ -13,7 +13,7 @@
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
-        largeHeader.style.height = (height * 0.66666)+'px';
+        largeHeader.style.height = (height * 0.666)+'px';
 
         canvas = document.getElementById('demo-canvas');
         canvas.width = width;
@@ -22,14 +22,24 @@
 
         // create points
         points = [];
+        if(width<500){
+            for(var x = 0; x < width; x = x + width/10) {
+                for(var y = 0; y < height; y = y + height/20) {
+                    var px = x + Math.random()*width/20;
+                    var py = y + Math.random()*height/20;
+                    var p = {x: px, originX: px, y: py, originY: py };
+                    points.push(p);
+                }
+            }
+        }
         for(var x = 0; x < width; x = x + width/20) {
             for(var y = 0; y < height; y = y + height/20) {
                 var px = x + Math.random()*width/20;
                 var py = y + Math.random()*height/20;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
+                }
             }
-        }
 
         // for each point find the 5 closest points
         for(var i = 0; i < points.length; i++) {
@@ -99,7 +109,7 @@
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
-        largeHeader.style.height = height+'px';
+        largeHeader.style.height = (height * 0.666)+'px';
         canvas.width = width;
         canvas.height = height;
     }
