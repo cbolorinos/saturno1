@@ -1,3 +1,17 @@
+/* Body */
+body{
+	font-family: 'josefin sans', sans-serif;
+}
+h1{
+	font-family: 'Roboto', sans-serif;
+}
+h2, h3, h4, h5{
+	font-family: 'josefin sans', sans-serif;
+	color:#f9a432;
+	text-transform:uppercase;
+}
+
+
 /* Header */
 .large-header {
 	position: relative;
@@ -11,6 +25,9 @@
 	background: radial-gradient(ellipse at center, #6b6b6b 0%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6b6b', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	z-index: 1;
+}
+#hero{
+	padding:0;
 }
 
 .main-title {
@@ -28,13 +45,11 @@
 }
 
 .main-title h2 {
-	color:#f9a432;
-	text-transform:uppercase;
 	margin:0 auto;
 	font-size: 1.25em;
 }
 .main-title h1 {
-	margin:40px auto 5px;
+	margin:50px auto 5px;
 	font-size: 2.75em;
 }
 .main-title img {
@@ -44,21 +59,33 @@
 	font-weight: 200;
 }
 
+/* Method */
+#method{
+	text-align: right;
+	background-color: #232323;
+	color:#fff;
+}
+#method .container .row .method-text{
+	padding:30px;
+}
+.img-method{
+	right:0;
+	max-height: 246px;
+}
+
 @media only screen and (max-width : 768px) {
-	.main-title h2 {
-		color:#f9a432;
-		text-transform:uppercase;
-		margin:0 auto;
-		font-size: 0.75em;
-	}
-	.main-title h1 {
-		margin:40px auto 5px;
-		font-size: 1.25em;
-	}
 	.main-title img {
 		max-width: 300px;
 	}
 	.large-header{
 		z-index: -1;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.main-title h1 {
+		font-size: 2em;
+	}
+	.main-title h2 {
+		font-size: 1em;
 	}
 }
